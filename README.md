@@ -25,7 +25,7 @@ can be found in the Johan Suykens perspective: https://www.sciencedirect.com/sci
 		do
     		for j in "${gamma[@]}"
     			do
-        			mpirun  -np 10 ./a.out 50000 6 $j $i 5000
+        			mpirun  -np 10 ./LSSVR_kfold-mpi 50000 6 $j $i 5000
     			done
 		done
 	where the terms in the command argument are the number of training points, the number of feautres (input dimension), 
@@ -49,3 +49,9 @@ can be found in the Johan Suykens perspective: https://www.sciencedirect.com/sci
 	The program also outputs two additional files Validation_XXX.txt which keeps track of the running average of the
 	error as a function of the number of test points and Difference_XXXX.txt which prints all the training points, 
 	the true target value and the predicted target value.  
+
+    To run the program:
+
+        ./LSSVR_Model 50000 6 $gamma $sigma 5000
+
+    where the arguments are the same as above. 
