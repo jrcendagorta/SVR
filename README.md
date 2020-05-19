@@ -23,7 +23,7 @@ can be found in the Johan Suykens perspective: https://www.sciencedirect.com/sci
 		gamma=(5 10 20 50)
 		for i in "${sigma[@]}"
 		do
-    			for j in "${gamma[@]}"
+    		for j in "${gamma[@]}"
     			do
         			mpirun  -np 10 ./a.out 50000 6 $j $i 5000
     			done
